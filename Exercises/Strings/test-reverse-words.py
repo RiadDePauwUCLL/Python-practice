@@ -1,5 +1,5 @@
 import codewars_test as test
-from solution import reverse_words
+from student import reverse_words
 
 @test.describe("Fixed Tests")
 def fixed_tests():

@@ -1,5 +1,5 @@
 import codewars_test as test
-from solution import count_sheep
+from student import count_sheep
 
 @test.describe("Fixed Tests")
 def fixed_tests():
