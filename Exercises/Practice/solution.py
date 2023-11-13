@@ -109,6 +109,7 @@ def make_negative(number):
 #  4  =>  true
 # 25  =>  true
 # 26  =>  false
+
 def is_square(n):
     if n < 0:
         return False
@@ -118,3 +119,68 @@ def is_square(n):
         return True
     else:
         return False
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Write ur code here:
+# The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+# To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+# Input
+# Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+# Output
+# Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+# Example
+# input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+# output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+
+def open_or_senior(data):
+    result = []
+    
+    for member in data:
+        age, handicap = member
+        
+        if age >= 55 and handicap > 7:
+            result.append("Senior")
+        else:
+            result.append("Open")
+        
+    return result
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Write ur code here:
+# Given an array of integers your solution should find the smallest integer.
+
+# For example:
+
+# Given [34, 15, 88, 2] your solution will return 2
+# Given [34, -345, -1, 100] your solution will return -345
+# You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+def find_smallest_int(arr):
+    return min(arr)
