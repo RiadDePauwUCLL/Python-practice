@@ -1,3 +1,5 @@
+import math
+
 #
 #        Feel free to make this your playground, have fun coding Python.
 #   

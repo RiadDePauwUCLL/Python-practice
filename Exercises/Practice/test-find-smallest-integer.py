@@ -2,9 +2,9 @@ import codewars_test as test
 
 # for backward compatibility
 try:
-    from solution import findSmallestInt as find_smallest_int
+    from student import findSmallestInt as find_smallest_int
 except ImportError:
-    from solution import find_smallest_int
+    from student import find_smallest_int
 
 @test.describe("Fixed Tests")
 def basic_tests():
