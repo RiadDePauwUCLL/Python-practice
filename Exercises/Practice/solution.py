@@ -9,6 +9,7 @@ import math
 #        Task:
 #        Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 #Write ur code here:
+
 def count_sheep(n):
     return ''.join(f'{n} sheep...' for n in range(1, n + 1))
 
@@ -28,6 +29,7 @@ def count_sheep(n):
 #        "This is an example!" ==> "sihT si na !elpmaxe"
 #        "double  spaces"      ==> "elbuod  secaps"
 #Write ur code here:
+
 def reverse_words(text):
     words = text.split(' ')
     word = [words[::-1] for word in words]
@@ -41,7 +43,7 @@ def reverse_words(text):
 
 
 
-# Write ur code here:           XD
+
 #           In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
 #           Make number negative
 #
@@ -52,6 +54,8 @@ def reverse_words(text):
 #           Notes
 #           The number can be negative already, in which case no change is required.
 #           Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+# Write ur code here:           XD
+
 def make_negative(number):
     if number > 0:
         return -number
@@ -67,7 +71,7 @@ def make_negative(number):
 
 
 
-# Write ur code here:
+
 # Freestyle Sparring
 # Take turns remixing and refactoring others code through Kumite
 # COMMUNITY
@@ -111,6 +115,7 @@ def make_negative(number):
 #  4  =>  true
 # 25  =>  true
 # 26  =>  false
+# Write ur code here:
 
 def is_square(n):
     if n < 0:
@@ -135,7 +140,7 @@ def is_square(n):
 
 
 
-# Write ur code here:
+
 # The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
 
 # To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
@@ -149,6 +154,7 @@ def is_square(n):
 # Example
 # input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
 # output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+# Write ur code here:
 
 def open_or_senior(data):
     result = []
@@ -175,7 +181,7 @@ def open_or_senior(data):
 
 
 
-# Write ur code here:
+
 # Given an array of integers your solution should find the smallest integer.
 
 # For example:
@@ -183,6 +189,7 @@ def open_or_senior(data):
 # Given [34, 15, 88, 2] your solution will return 2
 # Given [34, -345, -1, 100] your solution will return -345
 # You can assume, for the purpose of this kata, that the supplied array will not be empty.
+# Write ur code here:
 
 def find_smallest_int(arr):
     return min(arr)
@@ -194,7 +201,7 @@ def find_smallest_int(arr):
 
 
 
-# Write ur code here:
+
 # In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
 
 # The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
@@ -211,6 +218,7 @@ def find_smallest_int(arr):
 
 # s="aaaxbbbbyyhwawiwjjjwwm"
 # printer_error(s) => "8/22"
+# Write ur code here:
 
 def printer_error(s):
     printer_error = 0
@@ -219,3 +227,21 @@ def printer_error(s):
         if ord(i) > ord('m'):
             printer_error += 1
     return f'{printer_error}/{len(s)}'
+
+
+
+
+# Return the number (count) of vowels in the given string.
+
+# We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+# The input string will only consist of lower case letters and/or spaces.
+# Write ur code here:
+
+def get_count(sentence):
+    vowels = 0
+    given_vowels = "aeiou"
+    for char in sentence:
+        if char.lower() in given_vowels:
+            vowels += 1
+    return vowels
