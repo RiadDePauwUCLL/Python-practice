@@ -317,3 +317,8 @@ def count_sheeps(sheep):
         if i:
             count += 1
     return count
+
+# for this one, there is also a different possibility 
+# that may be really useful for string.
+# def count_sheeps(sheep):
+#     return sheep.count(True)
