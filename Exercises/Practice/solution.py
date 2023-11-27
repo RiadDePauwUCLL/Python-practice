@@ -74,28 +74,6 @@ def make_negative(number):
 
 # Freestyle Sparring
 # Take turns remixing and refactoring others code through Kumite
-# COMMUNITY
-# Leaderboards
-# Achieve honor and move up the global leaderboards
-# Chat
-# Join our Discord server and chat with your fellow code warriors
-# Discussions
-# View our Github Discussions board to discuss general Codewars topics
-# ABOUT
-# Docs
-# Learn about all of the different aspects of Codewars
-# RiadDePauwUCLL Avatar
-# 7 kyu
-# 55
-# 7 kyu
-# You're a square!
-# 203938888% of 20,90273,011 of 243,101bkaes
-#  Python
-# 3.11
-# VIM
-# EMACS
-# Instructions
-# Output
 # A square of squares
 # You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
 
@@ -322,3 +300,31 @@ def count_sheeps(sheep):
 # that may be really useful for string.
 # def count_sheeps(sheep):
 #     return sheep.count(True)
+
+
+
+
+
+
+
+
+
+# Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+
+# Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+# The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+# Examples: (Input --> Output)
+
+# [] --> []
+# ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+# Write ur code here:
+
+def number(lines):
+    return [f"{counter}: {line}" for counter, line in enumerate(lines, start=1)]
+
+# enumerate is a built-in function of Python. It returns an enumerate object.
+# It allows us to loop over something with an implemented counter & 
+# generates an index for each item in the loop.
+# counter basically loops itself over the lines, starting from 1.
