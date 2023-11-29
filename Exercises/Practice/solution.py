@@ -206,8 +206,14 @@ def printer_error(s):
             printer_error += 1
     return f'{printer_error}/{len(s)}'
 
-
-
+# I MADE THIS AND IM SO PROUD I DONT CARE
+def printer_error(s):
+    yourmommafat = 0
+    for char in s:
+        if char > "m":
+            yourmommafat += 1
+    return f"{yourmommafat}/{len(s)}"
+# SO FUNNY XSDDD
 
 # Return the number (count) of vowels in the given string.
 
