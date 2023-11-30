@@ -32,9 +32,16 @@ def count_sheep(n):
 
 def reverse_words(text):
     words = text.split(' ')
-    word = [words[::-1] for word in words]
+    word = [word[::-1] for word in words]
     reversed_text = ' '.join(word)
     return reversed_text
+
+# EVEN BETTER VERSION AHAHAHAHAHAHA
+
+def reverse_words(text):
+    words = text.split(' ')
+    XDDDDD = ' '.join(word[::-1] for word in words)
+    return XDDDDD
 
 
 
