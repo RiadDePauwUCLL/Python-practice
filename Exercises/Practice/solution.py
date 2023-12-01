@@ -311,8 +311,9 @@ def count_sheeps(sheep):
 
 # for this one, there is also a different possibility 
 # that may be really useful for string.
-# def count_sheeps(sheep):
-#     return sheep.count(True)
+
+def count_sheeps(sheep):
+    return sheep.count(True)
 
 
 
