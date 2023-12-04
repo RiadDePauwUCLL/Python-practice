@@ -342,3 +342,36 @@ def number(lines):
 # It allows us to loop over something with an implemented counter & 
 # generates an index for each item in the loop.
 # counter basically loops itself over the lines, starting from 1.
+
+
+
+
+
+
+
+# Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+
+# Examples:
+# a = "xyaabbbccccdefww"
+# b = "xxxxyyyyabklmopq"
+# longest(a, b) -> "abcdefklmopqwxy"
+
+# a = "abcdefghijklmnopqrstuvwxyz"
+# longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+# Write ur code here:
+
+def longest(a1,a2):
+    combined_set = set(a1 + a2)
+    sorted_result = ''.join(sorted(combined_set))
+
+    return sorted_result
+
+# here, we are using set() to store the unique values from a1 and a2.
+# then, we are using sorted() to sort the values from combined_set.
+# then, we are using ''.join() to join the sorted values from combined_set.
+
+# set() is an unordered collection of unique items.
+# set() is used to store unique values from a string.
+# set() is used to remove duplicates from a list.
+# set() is mutable, i.e., we can change its elements once it is created.
+# set() is unordered, i.e., it doesn't remember the order of insertion.
