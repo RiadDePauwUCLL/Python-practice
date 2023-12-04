@@ -366,6 +366,10 @@ def longest(a1,a2):
 
     return sorted_result
 
+#Just found it there's a better way of doing it:
+def longest(a1,a2):
+    return ''.join(sorted(set(a1 + a2)))
+
 # here, we are using set() to store the unique values from a1 and a2.
 # then, we are using sorted() to sort the values from combined_set.
 # then, we are using ''.join() to join the sorted values from combined_set.
