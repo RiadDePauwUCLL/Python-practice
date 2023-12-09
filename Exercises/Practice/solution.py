@@ -379,3 +379,38 @@ def longest(a1,a2):
 # set() is used to remove duplicates from a list.
 # set() is mutable, i.e., we can change its elements once it is created.
 # set() is unordered, i.e., it doesn't remember the order of insertion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Create a function with two arguments that will return an array of the first n multiples of x.
+
+# Assume both the given number and the number of times to count will be positive numbers greater than 0.
+
+# Return the results as an array or list ( depending on language ).
+
+# Examples
+# count_by(1,10) should return [1,2,3,4,5,6,7,8,9,10]
+# count_by(2,5) should return [2,4,6,8,10]
+# Write ur code here:
+
+def count_by(x, n):
+    b_random = []
+    user_4chan = x
+    while len(b_random) < n:
+        b_random.append(user_4chan)
+        user_4chan += x
+    
+    return b_random
