@@ -1,13 +1,14 @@
 import math
 
 #
-#        Feel free to make this your playground, have fun coding Python.
+# Feel free to make this your playground, have fun coding Python.
 #   
-#        Count sheep
-#        If you can't sleep, just count sheep!!
+# Count sheep
+# If you can't sleep, just count sheep!!
 #
-#        Task:
-#        Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+# Task:
+# Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". 
+# Input will always be valid, i.e. no negative integers.
 #Write ur code here:
 
 def count_sheep(n):
@@ -22,12 +23,13 @@ def count_sheep(n):
 
 
 
-#        Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+# Complete the function that accepts a string parameter, and reverses each word in the string. 
+# All spaces in the string should be retained.
 #        
-#        Reverse words
-#        Examples
-#        "This is an example!" ==> "sihT si na !elpmaxe"
-#        "double  spaces"      ==> "elbuod  secaps"
+# Reverse words
+# Examples
+# "This is an example!" ==> "sihT si na !elpmaxe"
+# "double  spaces"      ==> "elbuod  secaps"
 #Write ur code here:
 
 def reverse_words(text):
@@ -51,16 +53,16 @@ def reverse_words(text):
 
 
 
-#           In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
-#           Make number negative
+# In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+# Make number negative
 #
-#           Examples
-#           make_negative(1);  # return -1
-#           make_negative(-5); # return -5
-#           make_negative(0);  # return 0
-#           Notes
-#           The number can be negative already, in which case no change is required.
-#           Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
+# Examples
+# make_negative(1);  # return -1
+# make_negative(-5); # return -5
+# make_negative(0);  # return 0
+# Notes:
+# The number can be negative already, in which case no change is required.
+# Zero (0) is not checked for any specific sign. Negative zeros make no mathematical sense.
 # Write ur code here:           XD
 
 def make_negative(number):
@@ -82,14 +84,18 @@ def make_negative(number):
 # Freestyle Sparring
 # Take turns remixing and refactoring others code through Kumite
 # A square of squares
-# You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
+# You like building blocks. You especially like building blocks that are squares. 
+# And what you even like more, is to arrange them into a square of square building blocks!
 
-# However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
+# However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! 
+# Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! 
+# You just have to check if your number of building blocks is a perfect square.
 
 # Task
 # Given an integral number, determine if it's a square number:
 
-# In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+# In mathematics, a square number or perfect square is an integer that is the square of an integer; 
+# in other words, it is the product of some integer with itself.
 
 # The tests will always use some integral number, so don't worry about that in dynamic typed languages.
 
@@ -126,15 +132,19 @@ def is_square(n):
 
 
 
-# The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+# The Western Suburbs Croquet Club has two categories of membership, Senior and Open. 
+# They would like your help with an application form that will tell prospective members which category they will be placed.
 
-# To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+# To be a senior, a member must be at least 55 years old and have a handicap greater than 7. 
+# In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
 
 # Input
-# Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+# Input will consist of a list of pairs. Each pair contains information for a single potential member. 
+# Information consists of an integer for the person's age and an integer for the person's handicap.
 
 # Output
-# Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+# Output will consist of a list of string values (in Haskell and C: Open or Senior) 
+# stating whether the respective member is to be placed in the senior or open category.
 
 # Example
 # input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
@@ -187,13 +197,19 @@ def find_smallest_int(arr):
 
 
 
-# In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
+# In a factory a printer prints labels for boxes. 
+# For one kind of boxes the printer has to use colors which, for the sake of simplicity, are named with letters from a to m.
 
-# The colors used by the printer are recorded in a control string. For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, four times color b, one time color h then one time color a...
+# The colors used by the printer are recorded in a control string. 
+# For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used three times color a, 
+# four times color b, one time color h then one time color a...
 
-# Sometimes there are problems: lack of colors, technical malfunction and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
+# Sometimes there are problems: lack of colors, technical malfunction 
+# and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
 
-# You have to write a function printer_error which given a string will return the error rate of the printer as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. Don't reduce this fraction to a simpler expression.
+# You have to write a function printer_error which given a string will return the error rate of the printer 
+# as a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. 
+# Don't reduce this fraction to a simpler expression.
 
 # The string has a length greater or equal to one and contains only letters from ato z.
 
@@ -266,9 +282,13 @@ def high_and_low(numbers):
 
 
 
-# Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
+# Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). 
+# Jaden is also known for some of his philosophy that he delivers via Twitter. 
+# When writing on Twitter, he is known for almost always capitalizing every word. 
+# For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
 
-# Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+# Your task is to convert strings to how they would be written by Jaden Smith. 
+# The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
 
 # Example:
 
@@ -287,7 +307,8 @@ def to_jaden_case(string):
 
 
 
-# Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+# Consider an array/list of sheep where some sheep may be missing from their place. 
+# We need a function that counts the number of sheep present in the array (true means present).
 
 # For example,
 
@@ -319,10 +340,6 @@ def count_sheeps(sheep):
 
 
 
-
-
-
-
 # Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 
 # Write a function which takes a list of strings and returns each line prepended by the correct number.
@@ -349,7 +366,8 @@ def number(lines):
 
 
 
-# Take 2 strings s1 and s2 including only letters from a to z. Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
+# Take 2 strings s1 and s2 including only letters from a to z. 
+# Return a new sorted string, the longest possible, containing distinct letters - each taken only once - coming from s1 or s2.
 
 # Examples:
 # a = "xyaabbbccccdefww"
@@ -386,15 +404,6 @@ def longest(a1,a2):
 
 
 
-
-
-
-
-
-
-
-
-
 # Create a function with two arguments that will return an array of the first n multiples of x.
 
 # Assume both the given number and the number of times to count will be positive numbers greater than 0.
@@ -414,3 +423,34 @@ def count_by(x, n):
         user_4chan += x
     
     return b_random
+
+
+
+
+
+
+
+
+
+
+# After a hard quarter in the office you decide to get some rest on a vacation. 
+# So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+# You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+# Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. 
+# Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+# Write a code that gives out the total amount for different days(d).
+
+def rental_car_cost(d):
+    rent = 40
+    total = rent * d
+    if d >= 7:
+        total -= 50
+        return total 
+    elif d >= 3:
+        total -= 20
+        return total
+    else:
+        return total
