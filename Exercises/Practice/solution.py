@@ -427,12 +427,6 @@ def count_by(x, n):
 
 
 
-
-
-
-
-
-
 # After a hard quarter in the office you decide to get some rest on a vacation. 
 # So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
 
@@ -442,6 +436,7 @@ def count_by(x, n):
 # Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
 
 # Write a code that gives out the total amount for different days(d).
+# Write ur code here:
 
 def rental_car_cost(d):
     rent = 40
@@ -454,3 +449,34 @@ def rental_car_cost(d):
         return total
     else:
         return total
+    
+
+
+
+
+
+
+
+# Take an array and remove every second element from the array. 
+# Always keep the first element and start removing with the next element.
+
+# Example:
+# ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+# None of the arrays will be empty, so you don't have to worry about that!
+# Write ur code here:
+
+def remove_every_other(my_list):
+    optimus_prime = []
+    for i in range(len(my_list)):
+        if i % 2 == 0:
+            optimus_prime.append(my_list[i])
+    return optimus_prime
+
+# If you want a more pythonic way of doing it, you can use list slicing:
+def remove_every_other(my_list):
+    return my_list[::2]
+
+# list slicing is a way to extract a portion of a list.
+# list slicing is done by defining the start, stop, and step values.
+# list slicing is done by using the colon operator.
