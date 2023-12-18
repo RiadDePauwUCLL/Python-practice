@@ -619,6 +619,14 @@ def move_zeros(array):
 # Write ur code here:
 
 def cakes(recipe, available):
+    try:
+        return min([available[a]/recipe[a] for a in recipe])
+    except:
+        return 0
+
+# There is also a different way of doing it, but it's a bit more complex:
+
+def cakes(recipe, available):
     max_servings = float('inf')
     for ingredient, amount in recipe.items():
         if ingredient in available:
