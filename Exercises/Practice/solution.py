@@ -592,3 +592,53 @@ def move_zeros(array):
             array.remove(i) # Remove the element from the array
             array.append(i) # Append the element to the end
     return array
+
+
+
+
+
+
+
+
+# Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. 
+# Can you help him to find out, how many cakes he could bake considering his recipes?
+
+# Write a function cakes(), which takes the recipe (object) and the available ingredients (also an object) 
+# and returns the maximum number of cakes Pete can bake (integer). 
+
+# For simplicity there are no units for the amounts (e.g. 1 lb of flour or 200 g of sugar are simply 1 or 200). 
+# Ingredients that are not present in the objects, can be considered as 0.
+
+# Examples:
+
+#  must return 2
+# cakes({flour: 500, sugar: 200, eggs: 1}, {flour: 1200, sugar: 1200, eggs: 5, milk: 200})
+#  must return 0
+# cakes({apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100}, {sugar: 500, flour: 2000, milk: 2000})
+
+# Write ur code here:
+
+def cakes(recipe, available):
+    max_servings = float('inf')
+    for ingredient, amount in recipe.items():
+        if ingredient in available:
+            servings = available[ingredient] // amount
+            max_servings = min(max_servings, servings)
+        else:
+            return 0
+    return max_servings
+
+# In Python, float('inf') represents positive infinity, which is a mathematical concept indicating an unbounded positive value. 
+# It is a special floating-point representation that is greater than any finite floating-point number.
+
+# Here's a breakdown of the expression float('inf'):
+
+# float: This is a built-in function in Python that converts a number or a string to a floating-point number. 
+# In this case, it's used to explicitly convert the string 'inf' to a floating-point representation.
+
+# 'inf': This is a string representing infinity. The use of 'inf' is a convention in Python to denote positive infinity.
+
+# So, float('inf') creates a floating-point representation of positive infinity. 
+# This is commonly used in situations where you want to initialize a variable to a value that is guaranteed to be greater than any finite number. 
+# In the context of the previous code snippets, max_servings is initialized to positive infinity so that, during the iteration over ingredients, 
+# it can be updated with the minimum of the current value and the calculated servings, ensuring it eventually holds the smallest possible number of servings.
