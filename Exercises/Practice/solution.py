@@ -501,3 +501,34 @@ def filter_list(l):
         if isinstance(num, int):
             filter.append(num)
     return filter
+
+
+
+
+
+
+
+# Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+# For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
+
+# Example #2: An input of 765 will/should return 493625 because 72 is 49, 62 is 36, and 52 is 25. (49-36-25)
+
+# Note: The function accepts an integer and returns an integer.
+
+# Happy Coding!
+# Write ur code here:
+
+def square_digits(num):
+    str_num = str(num)
+    squared_digits = [str(int(digits) ** 2) for digits in str_num]
+    result = ''.join(squared_digits)
+    return int(result)
+
+# You got two ways of doing it. The first one is the one I did, which is the most clever one. The other one is more simple:
+
+def square_digits(num):
+    ret = ""
+    for x in str(num):
+        ret += str(int(x)**2)
+    return int(ret)
