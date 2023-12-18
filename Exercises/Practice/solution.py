@@ -559,3 +559,36 @@ def is_even(n):
     
 def is_even(n): 
     return n % 2 == 0
+
+
+
+
+
+
+
+# Write an algorithm that takes an array and moves all of the zeros to the end, 
+# preserving the order of the other elements.
+
+# move_zeros([1, 0, 1, 2, 0, 1, 3]) # returns [1, 1, 2, 1, 3, 0, 0]
+# Write ur code here:
+
+def move_zeros(lst):
+    new_lst = []
+    zero = []
+    for i in range(len(lst)):
+        if lst[i] > 0:
+            new_lst.append(lst[i])
+        elif lst[i] < 1:
+            zero.append(lst[i])
+    new_lst.extend(zero)
+    return new_lst
+
+
+# There is obviously a much more pythonic way of doing it, which is this one:
+
+def move_zeros(array):
+    for i in array:
+        if i == 0:
+            array.remove(i) # Remove the element from the array
+            array.append(i) # Append the element to the end
+    return array
