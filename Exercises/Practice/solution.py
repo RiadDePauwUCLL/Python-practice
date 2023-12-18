@@ -623,6 +623,14 @@ def cakes(recipe, available):
         return min([available[a]/recipe[a] for a in recipe])
     except:
         return 0
+    
+# here, we are using try and except.
+# try and except are used to prevent the code from crashing.
+# return min() returns the smallest number from the list.
+# available[a] / recipe[a] returns the number of servings for each ingredient.
+# recipe[a] returns the amount of each ingredient needed.
+# available[a] returns the amount of each ingredient available.
+# it returns 0 if there is not enough ingredients to make the cake.
 
 # There is also a different way of doing it, but it's a bit more complex:
 
