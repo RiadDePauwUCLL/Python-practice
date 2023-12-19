@@ -658,3 +658,23 @@ def cakes(recipe, available):
 # This is commonly used in situations where you want to initialize a variable to a value that is guaranteed to be greater than any finite number. 
 # In the context of the previous code snippets, max_servings is initialized to positive infinity so that, during the iteration over ingredients, 
 # it can be updated with the minimum of the current value and the calculated servings, ensuring it eventually holds the smallest possible number of servings.
+
+
+
+
+
+
+
+
+
+# The main idea is to count all the occurring characters in a string. 
+# If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+# What if the string is empty? Then the result should be empty object literal, {}.
+# Write ur code here:
+
+def count(s):
+    return {x : s.count(x) for x in set(s)}
+
+# here, we are using set(s) to store the unique values from s.
+# then, we are using count(x) to count the number of times each character appears in s thanks to the for loop.
