@@ -700,3 +700,10 @@ def ips_between(start, end):
         return sum(int(part) * 256 ** i for i, part in enumerate(reversed(ip.split('.'))))
     
     return ip_to_int(end) - ip_to_int(start)
+
+# alternative & faster method:
+
+from ipaddress import ip_address
+
+def ips_between(start, end):
+    return int(ip_address(end)) - int(ip_address(start))
