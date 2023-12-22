@@ -75,12 +75,6 @@ def make_negative(number):
 
 
 
-
-
-
-
-
-
 # Freestyle Sparring
 # Take turns remixing and refactoring others code through Kumite
 # A square of squares
@@ -121,17 +115,6 @@ def is_square(n):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 # The Western Suburbs Croquet Club has two categories of membership, Senior and Open. 
 # They would like your help with an application form that will tell prospective members which category they will be placed.
 
@@ -163,14 +146,6 @@ def open_or_senior(data):
             result.append("Open")
         
     return result
-
-
-
-
-
-
-
-
 
 
 
