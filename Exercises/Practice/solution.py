@@ -707,3 +707,68 @@ from ipaddress import ip_address
 
 def ips_between(start, end):
     return int(ip_address(end)) - int(ip_address(start))
+
+
+
+
+
+
+
+
+# Given an array of integers, find the one that appears an odd number of times.
+
+# There will always be only one integer that appears an odd number of times.
+
+# Examples
+# [7] should return 7, because it occurs 1 time (which is odd).
+# [0] should return 0, because it occurs 1 time (which is odd).
+# [1,1,2] should return 2, because it occurs 1 time (which is odd).
+# [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
+# [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
+# Write ur code here:
+
+def find_it(seq):
+    for odd in seq:
+        if seq.count(odd) % 2 != 0:
+            return odd
+        
+
+
+
+
+
+
+# Rock Paper Scissors
+# Let's play! You have to return which player won! In case of a draw return Draw!.
+
+# Examples(Input1, Input2 --> Output):
+
+# "scissors", "paper" --> "Player 1 won!"
+# "scissors", "rock" --> "Player 2 won!"
+# "paper", "paper" --> "Draw!"
+# Write ur code here:
+
+def rps(p1, p2):
+    if p1 == "scissors" and p2 == "paper":
+        return "Player 1 won!"
+    elif p1 == "rock" and p2 == "scissors":
+        return "Player 1 won!"
+    elif p1 == "paper" and p2 == "rock":
+        return "Player 1 won!"
+    elif p1 == p2:
+        return "Draw!"
+    else:
+        return "Player 2 won!"
+    
+# Dictionaries exist and they make our lives easier:
+    
+def rps(p1, p2):
+    beats = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}
+    if beats[p1] == p2:
+        return "Player 1 won!"
+    if beats[p2] == p1:
+        return "Player 2 won!"
+    return "Draw!"
+
+
+
