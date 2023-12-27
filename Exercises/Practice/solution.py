@@ -432,6 +432,8 @@ def rental_car_cost(d):
 
 
 
+
+# Remove every other within a list! AKA slicing.
 # Take an array and remove every second element from the array. 
 # Always keep the first element and start removing with the next element.
 
@@ -461,6 +463,8 @@ def remove_every_other(my_list):
 
 
 
+
+# How 2 filter a list!
 # In this kata you will create a function that takes a list of non-negative integers 
 # and strings and returns a new list with the strings filtered out.
 
@@ -483,6 +487,7 @@ def filter_list(l):
 
 
 
+# Square Digits
 # Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 
 # For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1. (81-1-1-81)
@@ -512,7 +517,7 @@ def square_digits(num):
 
 
 
-
+# Prime numbers
 # In this Kata we are passing a number (n) into a function.
 
 # Your code will determine if the number passed is even (or not).
@@ -540,7 +545,7 @@ def is_even(n):
 
 
 
-
+# Move the zeros!
 # Write an algorithm that takes an array and moves all of the zeros to the end, 
 # preserving the order of the other elements.
 
@@ -575,6 +580,7 @@ def move_zeros(array):
 
 
 
+# Ingredients & Cakes
 # Pete likes to bake some cakes. He has some recipes and ingredients. Unfortunately he is not good in maths. 
 # Can you help him to find out, how many cakes he could bake considering his recipes?
 
@@ -641,7 +647,7 @@ def cakes(recipe, available):
 
 
 
-
+# Count all characters within string
 # The main idea is to count all the occurring characters in a string. 
 # If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
 
@@ -660,6 +666,8 @@ def count(s):
 
 
 
+
+# IPs between eachother
 # Implement a function that receives two IPv4 addresses, and returns the number of addresses between them (including the first one, excluding the last one).
 
 # All inputs will be valid IPv4 addresses in the form of strings. The last address will always be greater than the first one.
@@ -690,6 +698,7 @@ def ips_between(start, end):
 
 
 
+# Find odd number
 # Given an array of integers, find the one that appears an odd number of times.
 
 # There will always be only one integer that appears an odd number of times.
@@ -747,3 +756,29 @@ def rps(p1, p2):
 
 
 
+
+
+
+
+
+
+# Disemvowel Trolls
+# Trolls are attacking your comment section!
+
+# A common way to deal with this situation is to remove all of the vowels 
+# from the trolls' comments, neutralizing the threat.
+
+# Your task is to write a function that takes a string and 
+# return a new string with all vowels removed.
+
+# For example, the string "This website is for losers LOL!" 
+# would become "Ths wbst s fr lsrs LL!".
+
+# Note: for this kata y isn't considered a vowel.
+# Write ur code here:
+
+def disemvowel(string_):
+    vowels = "aeuioAEUIO"
+    for vowel in vowels:
+        string_ = string_.replace(vowel, '')
+    return string_
