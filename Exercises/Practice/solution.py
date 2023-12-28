@@ -791,7 +791,6 @@ def disemvowel(string_):
 
 
 # Convert number to reversed array of digits
-# Convert number to reversed array of digits
 # Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
 
 # Example(Input => Output):
@@ -852,3 +851,31 @@ def get_grade(s1, s2, s3):
 
 def invert(lst):
     return [-x for x in lst]
+
+
+# This one seems so stupid yet so simple... clean.
+
+
+
+
+
+# Century From Year
+# The first century spans from the year 1 up to and including the year 100, 
+# the second century - from the year 101 up to and including the year 200, etc.
+
+# Task
+# Given a year, return the century it is in.
+
+# Examples
+# 1705 --> 18
+# 1900 --> 19
+# 1601 --> 17
+# 2000 --> 20
+
+from math import ceil
+
+def century(year):
+    return ceil(year / 100)
+
+
+# Extremely efficient.
