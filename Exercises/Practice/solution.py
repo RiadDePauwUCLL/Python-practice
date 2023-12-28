@@ -782,3 +782,56 @@ def disemvowel(string_):
     for vowel in vowels:
         string_ = string_.replace(vowel, '')
     return string_
+
+
+
+
+
+
+
+
+# Convert number to reversed array of digits
+# Convert number to reversed array of digits
+# Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+# Example(Input => Output):
+# 35231 => [1,3,2,5,3]
+# 0 => [0]
+# Write ur code here:
+
+def digitize(n):
+    return [int(digit) for digit in str(n)[::-1]]
+
+# Pretty much self-explanatory.
+
+
+
+
+
+
+# Grasshopper - Grade book
+# Complete the function so that it finds the average of the three scores 
+# passed to it and returns the letter value associated with that grade.
+
+# Numerical Score	Letter Grade
+# 90 <= score <= 100	'A'
+# 80 <= score < 90	'B'
+# 70 <= score < 80	'C'
+# 60 <= score < 70	'D'
+# 0 <= score < 60	'F'
+# Tested values are all between 0 and 100. 
+# Theres is no need to check for negative values or values greater than 100.
+# Write ur code here:
+
+def get_grade(s1, s2, s3):
+    average = (s1 + s2 + s3) / 3
+    if average >= 90:
+        return 'A'
+    elif average >= 80:
+        return 'B'
+    elif average >= 70:
+        return 'C'
+    elif average >= 60:
+        return 'D'
+    else:
+        return "F"
