@@ -871,6 +871,7 @@ def invert(lst):
 # 1900 --> 19
 # 1601 --> 17
 # 2000 --> 20
+# Write ur code here:
 
 from math import ceil
 
@@ -879,3 +880,32 @@ def century(year):
 
 
 # Extremely efficient.
+
+
+
+
+
+# Break the camelCase
+# Complete the solution so that the function will break up camel casing, using a space between words.
+
+# Example
+# "camelCasing"  =>  "camel Casing"
+# "identifier"   =>  "identifier"
+# ""             =>  ""
+# Write ur code here:
+
+def solution(s):
+    result = ''
+    for char in s:
+        if char.isupper():
+            result += ' ' + char
+        else:
+            result += char
+    return result
+
+# just read the code, it's that simple lol. Thought it was more complex than that.
+
+
+
+
+
