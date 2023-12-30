@@ -940,3 +940,28 @@ def remove_smallest(numbers):
         return small_pp
     else:
         return []
+    
+
+
+
+
+
+# Lost Without a Map
+
+# Given an array of integers, return a new array with each value doubled.
+
+# For example:
+
+# [1, 2, 3] --> [2, 4, 6]
+# Write ur code here:
+    
+def maps(a):
+    return [x * 2 for x in a]
+
+# alternative way
+
+def maps(a):
+    result = []
+    for x in a:
+        result.append(x * 2)
+    return result
