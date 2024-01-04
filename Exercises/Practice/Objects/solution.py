@@ -56,3 +56,51 @@ class Ghost(object):
 
 
 
+
+# Name your Python!
+# For those of us who are not very familiar with Python, 
+# let's handle the very basic challenge of creating a class named Python. 
+# We want to give our Pythons a name, 
+# so it should take a name argument that we can retrieve later.
+
+# For example:
+
+# bubba = Python('Bubba')
+# bubba.name # should return 'Bubba'
+# Write ur code here:
+        
+def Python():
+    def __init__(self, name):
+        self.name = name
+
+
+
+
+
+
+
+# Basic subclasses - Adam & Eve
+# According to the creation myths of the Abrahamic religions, 
+# Adam and Eve were the first Humans to wander the Earth.
+
+# You have to do God's job. 
+# The creation method must return an array of length 2 containing objects 
+# (representing Adam and Eve). 
+# The first object in the array should be an instance of the class Man. 
+        
+# The second should be an instance of the class Woman. 
+# Both objects have to be subclasses of Human. 
+# Your job is to implement the Human, Man and Woman classes.
+# Write ur code here:
+        
+def God():
+    return [(Man), (Woman)]
+
+class Human:
+    pass
+
+class Man(Human):
+    pass
+
+class Woman(Human):
+    pass
