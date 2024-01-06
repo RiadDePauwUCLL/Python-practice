@@ -23,3 +23,13 @@ print(string)
 # for i in range(len(xs), -1): This will raise an error because range() function with two arguments generates a sequence of numbers starting from the first argument up to but not including the second argument. In this case, it will try to generate a sequence starting from the length of xs down to -1, which is not valid. If you want to generate a sequence in reverse order, you should use range(len(xs)-1, -1, -1).
 
 # Remember, the range() function generates a sequence of numbers and does not modify the actual iterable you are looping over. On the other hand, for i in xs directly iterates over the elements in the iterable.
+
+# If you add +1 to the stop value in the range() function, it will include the stop value in the generated sequence:
+# For example, for i in range(0, xs + 1) will generate a sequence of numbers starting from 0 up to and including xs.
+# This is often used when you want to include the stop value in the loop. 
+# Remember that range() function by default does not include the stop value in the generated sequence.
+
+
+# If you use for i in range(0, xs -1):
+# For example, if xs is 5, the loop will iterate over the numbers 0, 1, 2, 3. 
+# The number 4 (which is xs - 1 in this case) will not be included in the loop.
