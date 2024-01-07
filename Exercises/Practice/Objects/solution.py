@@ -1,4 +1,4 @@
-import random
+import random,math
 
 # Classic Hello World
 # You are given a method called main, make it print the line Hello World!, 
@@ -236,4 +236,101 @@ class Block:
 
 
 
+# Patterncraft - State
 
+# The State Design Pattern can be used, for example, to manage the state of a tank in the StarCraft game.
+
+# The pattern consists in isolating the state logic in different classes 
+# rather than having multiple ifs to determine what should happen.
+
+# Your Task
+# Complete the code so that when a Tank goes into SiegeMode it cannot move and its damage goes to 20. 
+# When it goes to TankMode it should be able to move and the damage should be set to 5.
+
+# You have 3 classes:
+
+# Tank: has a state, canMove and damage properties
+# SiegeState and TankState: has canMove and damage properties
+# Note: The tank initial state should be TankState.
+
+# Write ur code here:
+    
+class SiegeState():
+    def __init__(self):
+        self.can_move = False
+        self.damage = 20
+
+class TankState():
+    def __init__(self):
+        self.can_move = True
+        self.damage = 5
+
+class Tank():
+    def __init__(self, state=None):
+        if state is None:
+            state = TankState()
+        self.state = state
+
+    def can_move(self):
+        return self.state.can_move
+    
+    def damage(self):
+        return self.state.damage
+    
+
+# here the state returns the equal amount of damage & movement depending on which state the tank has.
+    
+
+
+
+
+
+
+# Building Spheres
+    
+#  Arguments for the constructor
+# radius -> integer or float (do not round it)
+# mass -> integer or float (do not round it)
+
+# Methods to be defined:
+
+# get_radius()       =>  radius of the Sphere (do not round it)
+# get_mass()         =>  mass of the Sphere (do not round it)
+# get_volume()       =>  volume of the Sphere (rounded to 5 place after the decimal)
+# get_surface_area() =>  surface area of the Sphere (rounded to 5 place after the decimal)
+# get_density()      =>  density of the Sphere (rounded to 5 place after the decimal)
+
+# Example:
+
+# ball = Sphere(2,50)
+# ball.get_radius() ->       2
+# ball.get_mass() ->         50
+# ball.get_volume() ->       33.51032
+# ball.get_surface_area() -> 50.26548
+# ball.get_density() ->      1.49208
+
+# Write ur code here:
+
+class Sphere:
+    def __init__(self, radius, mass):
+        self.radius = radius
+        self.mass = mass
+
+    def get_radius(self):
+        return self.radius
+
+    def get_mass(self):
+        return self.mass
+
+    def get_volume(self):
+        return round((4/3) * math.pi * self.radius**3, 5)
+
+    def get_surface_area(self):
+        return round(4 * math.pi * self.radius**2, 5)
+
+    def get_density(self):
+        volume = (4/3) * math.pi * self.radius**3  # calculate exact volume
+        return round(self.mass / volume, 5)  # calculate density using exact volume
+    
+
+# it's just basic math & returns.
