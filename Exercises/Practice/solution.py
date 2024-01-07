@@ -1051,8 +1051,6 @@ def better_than_average(class_points, your_points):
 
 
 
-
-
 # Convert a string to an array
 
 # Write a function to split a string and convert it into an array of words.
@@ -1066,3 +1064,24 @@ def better_than_average(class_points, your_points):
     
 def string_to_array(s):
     return s.split(' ')
+
+
+
+
+
+
+# Reduce but Grow
+
+# Given a non-empty array of integers, return the result of multiplying the values together in order. 
+
+# Example:
+
+# [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+# Write ur code here:
+
+def grow(arr):
+    gamer = 1
+    for i in arr:
+        gamer *= i
+    return gamer
