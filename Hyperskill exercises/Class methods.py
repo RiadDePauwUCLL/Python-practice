@@ -25,5 +25,5 @@ class Point:
         self.x = x
         self.y = y
 
-    def dist(self, other_point):
+    def dist(self, other_point): # cannot use self instance twice in a row.
         return sqrt((self.x - other_point.x)**2 + (self.y - other_point.y) **2)
