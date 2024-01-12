@@ -1145,4 +1145,12 @@ def find_uniq(arr):
         if count == 1:
             return number
         
-# Dictionaries are very powerful & faster in terms of finding counts of specific items.
+#           Dictionaries are very powerful & faster in terms of finding counts of specific items.
+
+##          OR, we can use sets!
+        
+def find_uniq(arr):
+    s = set(arr)
+    for e in s:
+        if arr.count(e) ==1:
+            return e
