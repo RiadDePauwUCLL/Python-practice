@@ -1154,3 +1154,89 @@ def find_uniq(arr):
     for e in s:
         if arr.count(e) ==1:
             return e
+
+
+
+
+
+
+# Friend or Foe?
+
+# Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+# If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! 
+# Otherwise, you can be sure he's not...
+
+# Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+# i.e.
+
+# friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+# Note: keep the original order of the names in the output.
+
+# Write ur code here:
+        
+def friend(x):
+    foe = []
+    for i in x:
+        if len(i) == 4:
+            foe.append(i)
+    return foe
+
+
+
+
+
+
+
+# Your order, please
+
+# Your task is to sort a given string. Each word in the string will contain a single number. 
+# This number is the position the word should have in the result.
+
+# Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+# If the input string is empty, return an empty string. 
+# The words in the input String will only contain valid consecutive numbers.
+
+# Examples
+# "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+# "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+# ""  -->  ""
+
+# Write ur code here:
+
+def order(sentence):
+    words = sentence.split()
+    result = [None] * len(words)
+    for word in words:
+        for char in word:
+            if char.isdigit():
+                result[int(char) -1] = word
+    return ' '.join(result)
+
+
+
+
+
+
+# Sum of numbers
+
+# Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. 
+# If the two numbers are equal return a or b.
+
+# Note: a and b are not ordered!
+
+# Examples (a, b) --> output (explanation)
+# (1, 0) --> 1 (1 + 0 = 1)
+# (1, 2) --> 3 (1 + 2 = 3)
+# (0, 1) --> 1 (0 + 1 = 1)
+# (1, 1) --> 1 (1 since both are same)
+# (-1, 0) --> -1 (-1 + 0 = -1)
+# (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+# Your function should only return a number, not the explanation about how you get that number.
+
+# Write ur code here:
+
+def get_sum(a, b):
+    return sum(range(min(a, b), max(a, b) + 1)) # get the sum of the range from the min & max of a & b + 1.
