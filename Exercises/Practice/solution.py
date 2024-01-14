@@ -1282,3 +1282,14 @@ def validate_pin(pin):
 
 def fake_bin(x):
     return ''.join('0' if int(i) < 5 else '1' for i in x)
+
+# OR, in a different syntax:
+
+def fake_bin(x):
+    result = ""
+    for num in x:
+        if int(num) < 5:
+            result = result + "0"
+        else:
+            result = result + "1"
+    return result
