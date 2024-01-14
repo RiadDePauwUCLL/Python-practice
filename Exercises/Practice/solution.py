@@ -1240,3 +1240,45 @@ def order(sentence):
 
 def get_sum(a, b):
     return sum(range(min(a, b), max(a, b) + 1)) # get the sum of the range from the min & max of a & b + 1.
+
+
+
+
+
+
+
+
+# Regex validate PIN code
+
+# ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+# If the function is passed a valid PIN string, return true, else return false.
+
+# Examples (Input --> Output)
+# "1234"   -->  true
+# "12345"  -->  false
+# "a234"   -->  false
+
+# Write ur code here:
+
+def validate_pin(pin):
+    return len(pin) in (4, 6) and pin.isdigit()
+
+# I didn't know regex in python was that simple wow
+
+
+
+
+
+
+# Fake Binary
+
+# Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. 
+# Return the resulting string.
+
+# Note: input will never be an empty string
+
+# Write ur code here:
+
+def fake_bin(x):
+    return ''.join('0' if int(i) < 5 else '1' for i in x)
