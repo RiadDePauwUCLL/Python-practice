@@ -605,6 +605,17 @@ def cakes(recipe, available):
     except:
         return 0
     
+# Or, you could also work with lists:
+    
+def cakes(recipe, available):
+    list = []
+    for ingredient in recipe:
+        if ingredient in available:
+            list.append(available[ingredient] // recipe[ingredient])
+        else:
+            return 0
+    return min(list)
+    
 # here, we are using try and except.
 # try and except are used to prevent the code from crashing.
 # return min() returns the smallest number from the list.
