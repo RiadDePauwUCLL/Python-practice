@@ -477,7 +477,7 @@ def remove_every_other(my_list):
 def filter_list(l):
     filter = []
     for num in l:
-        if isinstance(num, int):
+        if isinstance(num, int): # Return whether an object is an instance of a class or of a subclass thereof.
             filter.append(num)
     return filter
 
