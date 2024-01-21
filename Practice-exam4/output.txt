@@ -1,0 +1,6 @@
+The longest word ending in a vowel is: orthopedagogie
+The longest word ending in a consonant is: hottentottententententoonstelling
+The shortest word that starts with a vowel is: ik
+The shortest word that starts with a consonant is: ik
+The number of vowels used is: 256
+The number of consonants used is: 366

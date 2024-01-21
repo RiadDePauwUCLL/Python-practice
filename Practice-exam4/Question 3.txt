@@ -1,0 +1,16 @@
+You will receive an input file. That input file contains words. The idea is that you read all these words and figure out the following:
+- find the longest word that ends in a vowel
+- find the longest word that ends in a consonant
+- find the shortest word that starts with a vowel
+- find the shortest word that starts with a consonant
+- count how many vowels appear in all words
+- count how many consonants occur in all words
+
+Write the results to an output file as follows:
+The longest word ending in a vowel is:
+The longest word ending in a consonant is:
+The shortest word that starts with a vowel is:
+The shortest word that starts with a consonant is:
+The number of vowels used is:
+The number of consonants used is:
+

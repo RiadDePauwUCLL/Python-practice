@@ -1,0 +1,1 @@
+Visitor with height 50 is too small, so the person cannot visit Max & Moritz

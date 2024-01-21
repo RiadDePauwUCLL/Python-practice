@@ -1,0 +1,6 @@
+The longest word that ends in a vowel is: orthopedagogy
+The longest word that ends in a consonant is: hottentotenttentexhibition
+The shortest word that starts with a vowel is: i
+The shortest word that starts with a consonant is: zo
+The number of vowels used is: 256
+The number of consonants used is: 366
