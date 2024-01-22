@@ -31,8 +31,8 @@ print(emp_1.fullname)
 
 class Microsoft:
     def __init__(self, first, last):
-        self._first = first
-        self._last = last
+        self.first = first
+        self.last = last
 
     @property
     def email2(self):
@@ -54,6 +54,6 @@ emp_2 = Microsoft('Timmy', 'Turner')
 
 emp_2.fullname2 = 'John Kramer'
 
-print(emp_2._first)
+print(emp_2.first)
 print(emp_2.email2)
 print(emp_2.fullname2)

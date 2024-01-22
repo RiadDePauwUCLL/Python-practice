@@ -19,3 +19,8 @@ https://www.codewars.com/collections/redo-and-understand
 
 Collections for all object-related exercises:
 https://www.codewars.com/collections/python-objects
+
+
+
+
+All credits go to everyone & everything that is involved within this repository. UCLL, Matej, Danilo & much much more.

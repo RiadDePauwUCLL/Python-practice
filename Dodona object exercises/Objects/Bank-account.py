@@ -34,7 +34,7 @@ class BankAccount:
     
     def __str__(self):
         return f'{self.name}, {self.account_number}, amount: {self.amount}'
-
+    # Good example of what str & repr does here.
     
     def __repr__(self):
         return f"BankAccount('{self.name}', '{self.account_number}', {self.amount})"

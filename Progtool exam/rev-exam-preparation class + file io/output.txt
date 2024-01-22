@@ -1,0 +1,3 @@
+average age: 35
+oldest person: Serhat
+youngest person: Mikkel

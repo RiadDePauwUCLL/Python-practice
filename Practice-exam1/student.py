@@ -8,7 +8,16 @@ def csom(n):
         num = sum(int(digit) for digit in str(num))
     return num
 
-# other possible solution
+# other possible solutions
+
+# def csom(n):
+#     while n >= 10:
+#         total = 0
+#         for digit in str(n):
+#             total += int(digit)
+#         n = total
+#     print(n)
+#     return n
 
 # def csom(n):
 #     sum_of_digits = 0
@@ -83,9 +92,10 @@ class Attraction:
 de_pagode = Attraction("De Pagode", 0)
 max_moritz = Attraction("Max & Moritz", 100)
 de_baron = Attraction("De Baron", 132)
-
+de_baron2 = Attraction("", 132)
 max_moritz.visit(150)
 max_moritz.visit(150)
+de_baron2.visit(150)
 # max_moritz.visit(50)
 
 
@@ -126,7 +136,7 @@ class ThemePark:
                 new_height = int(new_height.strip().split(' ')[0])
                 attractions = [a.strip() for a in attractions.split(',')]
                 for attraction in attractions:
-                    for a in self.attractions:
+                    for a in self.attractions:  
                         if a.name.lower().replace(' ', '') == attraction.lower().replace(' ', ''):
                             a.height = new_height
                             break
