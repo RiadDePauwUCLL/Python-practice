@@ -7,11 +7,6 @@ class Player:
         self.kills = kills
         self.is_alive = True        # you don't necessarily always have to have a variable as a parameter.
 
-    @property
-    def name(self):
-        return self.__name
-    
-    @name.setter
     def name(self, other):
         if self.__name == other:
             raise AssertionError("Same name, same player!")

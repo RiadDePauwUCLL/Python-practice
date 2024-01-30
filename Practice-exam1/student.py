@@ -84,7 +84,7 @@ class Attraction:
             self.visitors += 1
             # print("enjoy!")
         else:
-            with open('log.txt', 'a') as f:
+            with open('log.txt', 'r') as f:
                 f.write(f'Visitor with height {height} is too small, so the person cannot visit {self.__name}')
 
 
@@ -115,13 +115,13 @@ class ThemePark:
     
     @name.setter
     def name(self, value):
-        if not value or not value[0].isupper():
+        if not value or not value[0].isupper(): #.iscapitalized():
             raise ValueError("Name must start with a capital letter & cannot be empty")
         self.__name = value
 
     def addAttraction(self, attraction):
         if not any(a.name.lower().replace(' ', '') == attraction.name.lower().replace(' ', '') for a in self.attractions):
-            self.attractions.append(attraction)
+            self.attractions.append(attraction) #check line 169
 
     def printOverview(self):
         total_visits = sum(a.visitors for a in self.attractions)
@@ -141,7 +141,7 @@ class ThemePark:
                             a.height = new_height
                             break
                     else:
-                        with open('log.txt', 'a') as log:
+                        with open('log.txt', 'r') as log:
                             log.write(f"Attraction {attraction} does not exist in the amusement park.\n")
 
         print("Overview of the attractions after security update:")
@@ -162,3 +162,15 @@ efteling.addAttraction(de_baron)
 efteling.printOverview()
 
 efteling.securityupdate('update.txt')
+
+
+
+
+# The any function in Python is a built-in function that returns True if at least one element 
+# of an iterable is true. If the iterable is empty, any returns False.
+
+# Here's a basic usage example:
+
+# In the context of your file student.py, without more information or context, 
+# it's hard to provide a more specific explanation. If any is used in a condition, 
+# it's likely checking if any element in a list or other iterable meets a certain condition.

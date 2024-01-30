@@ -29,7 +29,7 @@ class Attraction: #Define our Class
         self.visitors = 0 # It initializes the visitors attribute to 0.
 
     @property #Here we define our getter.
-    def name(self) -> str: 
+    def name(self):
         return self.__name #this method simply returns the value of the name attribute from the init.
         
     @name.setter
@@ -39,9 +39,7 @@ class Attraction: #Define our Class
         self.__name = val #Otherwise the name is set to the value.
 
     def visit(self, height): #Here a method is defined.
-       min_height = 100 #We give it 2 varriables it will use for a condition.
-       max_height = 200
-       if min_height <= height <= max_height: #If this condition returns true then...
+       if height >= self.height: #If this condition returns true then...
            self.visitors += 1 #1 is added to the visitor count.
        else: #Otherwise...
            with open('log.txt', 'a') as f: #A log text file is opened as f, 'a' appends to the end of the file.
@@ -85,7 +83,7 @@ class ThemePark: #Define our Class Theme Park.
            self.attractions.append(attraction) #If not we append it to attraction.
 
     def printOverview(self): #Here we define a math to print an overview of the attraction.
-       total_visits = sum(a.visits for a in self.attractions) #sotres all visits of an attraction by summing them up.
+       total_visits = sum(a.visitors for a in self.attractions) #sotres all visits of an attraction by summing them up.
        print(f"{self.name} is an amusement park with {len(self.attractions)} attractions visited a total of {total_visits} times.") #prints the information.
 
 
@@ -106,11 +104,11 @@ class ThemePark: #Define our Class Theme Park.
                             log.write(f"Error: No such attraction '{attraction}' in the theme park.\n") #We then say which attraction is not in the park
                     else:
                         for matching_attraction in matching_attractions: #Otheriwse...
-                            matching_attraction.min_height = max(matching_attraction.min_height, height) #This line updates the min_height attribute of the current matching_attraction to be the maximum of its current min_height and the height variable. This effectively sets the min_height of the attraction to be the higher of the two values. 
+                            matching_attraction.height = max(matching_attraction.height, height) #This line updates the min_height attribute of the current matching_attraction to be the maximum of its current min_height and the height variable. This effectively sets the min_height of the attraction to be the higher of the two values. 
 
         print("\nOverview of the attractions after security update:\n") #We then in a new line print an overview of this update.
         for attraction in self.attractions:
-            print(f"- {attraction.name}: {attraction.min_height} cm") #For every attraction in the attractions list we print it's name and min height requirement.
+            print(f"- {attraction.name}: {attraction.height} cm") #For every attraction in the attractions list we print it's name and min height requirement.
 
 
 # create theme park
