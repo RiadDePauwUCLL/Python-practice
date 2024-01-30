@@ -1304,3 +1304,183 @@ def fake_bin(x):
         else:
             result = result + "1"
     return result
+
+
+
+
+
+
+
+# Delete occurences of an element if it occurs more than n times
+
+# Enough is enough!
+
+# Alice and Bob were on a holiday. Both of them took many pictures of the places they've been, and now they want to show Charlie their entire collection. 
+# However, Charlie doesn't like these sessions, since the motif usually repeats. He isn't fond of seeing the Eiffel tower 40 times.
+# He tells them that he will only sit for the session if they show the same motif at most N times. Luckily, Alice and Bob are able to encode the motif as a number. 
+# Can you help them to remove numbers such that their list contains each number only up to N times, without changing the order?
+
+# Task
+
+# Given a list and a number, create a new list that contains each number of list at most N times, without reordering.
+# For example if the input number is 2, and the input list is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], 
+# drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
+# With list [20,37,20,21] and number 1, the result would be [20,37,21].
+
+# Write ur code here:
+
+def delete_nth(order, max_e):
+    enough = order[::-1]
+
+    for i in order:
+        if enough.count(i) > max_e:
+            enough.remove(i)
+    
+    return enough[::-1]
+
+# this is basically reversing the list, deleting the "last" occuring digit and then reversing it again to it's original order.
+#  :)
+
+
+
+
+
+
+# Sum of positive
+
+# You get an array of numbers, return the sum of all of the positives ones.
+
+# Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+# Note: if there is nothing to sum, the sum is default to 0.
+
+# Write ur code here:
+
+def positive_sum(arr):
+    sum = 0
+    for i in arr:
+        if i > 0:
+            sum += i
+    return sum
+
+
+
+
+
+
+
+# Count of positives / sum of negatives
+
+# Given an array of integers.
+
+# Return an array, where the first element is the count of positives numbers 
+# and the second element is sum of negative numbers. 
+# 0 is neither positive nor negative.
+
+# If the input is an empty array or is null, return an empty array.
+
+# Example
+# For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], 
+# you should return [10, -65].
+
+# Write ur code here:
+
+def count_positives_sum_negatives(arr):
+    list = []
+    pos = 0
+    neg = 0
+    
+    for i in arr:
+
+        if i > 0:
+            pos += 1
+            
+        elif i < 0:
+            neg += i
+        
+    if arr == list:
+        return list
+    
+    list.append(pos)
+    list.append(neg)
+    
+    return list
+
+
+
+
+
+
+
+# Abbreviate a Two Word Name
+
+# Write a function to convert a name into initials. 
+# This kata strictly takes two words with one space in between them.
+
+# The output should be two capital letters with a dot separating them.
+
+# It should look like this:
+
+# Sam Harris => S.H
+
+# patrick feeney => P.F
+
+# Write ur code here:
+
+def abbrev_name(name):
+    split_name = name.split()
+    Fname = split_name[0][0]
+    Lname = split_name[1][0]
+    return f'{Fname.upper()}.{Lname.upper()}'
+
+# stop being clever y'all
+
+    return '.'.join(w[0] for w in name.split()).upper()
+
+
+
+
+
+
+# Snail
+
+# Snail Sort
+# Given an n x n array, return the array elements arranged from 
+# outermost elements to the middle element, traveling clockwise.
+
+# array = [[1,2,3],
+#          [4,5,6],
+#          [7,8,9]]
+# snail(array) #=> [1,2,3,6,9,8,7,4,5]
+# For better understanding, please follow the numbers of the next array consecutively:
+
+# array = [[1,2,3],
+#          [8,9,4],
+#          [7,6,5]]
+# snail(array) #=> [1,2,3,4,5,6,7,8,9]
+# This image will illustrate things more clearly:
+
+
+# NOTE: The idea is not sort the elements from the lowest value to the highest; 
+# the idea is to traverse the 2-d array in a clockwise snailshell pattern.
+
+# NOTE 2: The 0x0 (empty matrix) is represented as en empty array inside an array [[]].
+
+# Write ur code here:
+
+def snail(array):
+    result = []
+    while array:
+        result += array.pop(0)
+        if array and array[0]:
+            for row in array:
+                result.append(row.pop())
+        if array:
+            result += array.pop()[::-1]
+        if array and array[0]:
+            for row in array[::-1]:
+                result.append(row.pop(0))
+    return result
+
+
+# Algorithms & logic, such a beauty
