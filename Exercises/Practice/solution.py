@@ -1562,7 +1562,6 @@ def array_diff(a, b):
 
 
 
-
 # The Supermarket Queue
 
 def queue_time(customers, n):
@@ -1570,3 +1569,30 @@ def queue_time(customers, n):
     for i in customers:
         tills[tills.index(min(tills))] += i
     return max(tills)
+
+
+
+
+
+
+
+
+
+# Remove "string" Spaces
+
+# Write a function that removes the spaces from the string, then return the resultant string.
+
+# Examples:
+
+# Input -> Output
+# "8 j 8   mBliB8g  imjB8B8  jl  B" -> "8j8mBliB8gimjB8B8jlB"
+# "8 8 Bi fk8h B 8 BB8B B B  B888 c hl8 BhB fd" -> "88Bifk8hB8BB8BBBB888chl8BhBfd"
+# "8aaaaa dddd r     " -> "8aaaaaddddr"
+
+# Write ur code here:
+
+def no_space(x):
+    return x.replace(" ", "")
+
+
+# THIS ONE TOOK ME LEGIT 10 MINUTES WTF???????????????????? STRINGS ARE SO ANNOYING8888888888888888888
