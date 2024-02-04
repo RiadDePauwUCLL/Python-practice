@@ -1556,3 +1556,17 @@ def array_diff(a, b):
 
 def array_diff(a, b):
     return [item for item in a if item not in b]
+
+
+
+
+
+
+
+# The Supermarket Queue
+
+def queue_time(customers, n):
+    tills = [0]*n
+    for i in customers:
+        tills[tills.index(min(tills))] += i
+    return max(tills)
