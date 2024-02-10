@@ -1683,3 +1683,60 @@ def max_sequence(arr):
     return max_so_far
 
 # solved using Kadane's algorithm. That one I had to look through AI for real, a new algorithm learned.
+
+
+
+
+
+
+# Binary Addition
+
+# Implement a function that adds two numbers together and returns their sum in binary. 
+# The conversion can be done before, or after the addition.
+
+# The binary number returned should be a string.
+
+# Examples:(Input1, Input2 --> Output (explanation)))
+
+# 1, 1 --> "10" (1 + 1 = 2 in decimal or 10 in binary)
+# 5, 9 --> "1110" (5 + 9 = 14 in decimal or 1110 in binary)
+
+# Write ur code here:
+
+def add_binary(a,b):
+    sum = a + b
+    binary_string = bin(sum)[2:]
+    return binary_string
+
+
+
+
+
+
+# Find the next perfect square!
+
+# You might know some pretty large perfect squares. But what about the NEXT one?
+
+# Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. 
+# Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+
+# If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
+
+# Examples:(Input --> Output)
+
+# 121 --> 144
+# 625 --> 676
+# 114 --> -1 since 114 is not a perfect square
+
+# Write ur code here:
+
+import math
+from decimal import *
+
+def find_next_square(sq):
+    new = math.sqrt(sq)
+    if int(new) == abs(new):
+        new += 1
+    else:
+        return -1
+    return new * new
