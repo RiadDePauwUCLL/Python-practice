@@ -1740,3 +1740,41 @@ def find_next_square(sq):
     else:
         return -1
     return new * new
+
+
+
+
+
+
+
+# Parse nice int from char problem
+
+# You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+
+# Write a program that returns the girl's age (0-9) as an integer.
+
+# Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". 
+# The first character in the string is always a number.
+
+# Write ur code here:
+
+def get_age(age):
+    for i in age:
+        if i.isdigit():
+            return int(i)
+        
+
+
+
+
+# Shortest Word
+
+# Simple, given a string of words, return the length of the shortest word(s).
+
+# String will never be empty and you do not need to account for different data types.
+        
+# Write ur code here:
+        
+def find_short(s):
+    words = s.split()
+    return min([len(word) for word in words])
