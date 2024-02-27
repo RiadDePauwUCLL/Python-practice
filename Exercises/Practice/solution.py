@@ -1778,3 +1778,26 @@ def get_age(age):
 def find_short(s):
     words = s.split()
     return min([len(word) for word in words])
+
+
+
+
+
+
+
+# Extract the domain name from a URL
+
+# Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. 
+
+# For example:
+
+# * url = "http://github.com/carbonfive/raygun" -> domain name = "github"
+# * url = "http://www.zombie-bites.com"         -> domain name = "zombie-bites"
+# * url = "https://www.cnet.com"                -> domain name = cnet"
+
+# Write ur code here:
+
+def domain_name(url):
+    stripped_url = url.replace("https://", "").replace("http://", "").replace("www.", "")
+    domain_name = stripped_url.split(".")[0]
+    return domain_name
